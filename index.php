@@ -36,6 +36,9 @@
              <li class="nav-item">
                  <a class="nav-link" href="Web/LogOut.php">Logout</a>
             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="Web/phanpage.html">Plan page</a>
+            </li>
          </ul>
 
       </div>
