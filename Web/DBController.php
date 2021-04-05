@@ -24,6 +24,20 @@ class DBController {
 			return $resultset;
 	}
 	
+        function runUpdate($query) {
+		$result = mysqli_query($this->conn,$query);
+		if(!empty($result))
+                {
+     
+                    return $result;
+                }
+                else
+                {
+                   
+                    echo $query;
+                }
+	}
+        
 	function numRows($query) {
 		$result  = mysqli_query($this->conn,$query);
 		$rowcount = mysqli_num_rows($result);

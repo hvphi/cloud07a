@@ -37,6 +37,16 @@ body {
 	border-radius: 3px;
 	margin: 10px 0px;
 }
+#btnOrder {
+	background-color: #ffffff;
+	border: #d00000 1px solid;
+	padding: 5px 10px;
+	color: blue;
+	float: right;
+	text-decoration: none;
+	border-radius: 3px;
+	margin: 10px 0px;
+}
 
 .btnAddAction {
     padding: 5px 10px;
@@ -121,4 +131,11 @@ body {
 	text-align: center;
 	clear: both;
 	margin: 38px 0px;
+}
+table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: gray;
+  border-width: 2px;
 }

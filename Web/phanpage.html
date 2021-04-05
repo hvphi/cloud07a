@@ -24,14 +24,26 @@ and open the template in the editor.
                     <li>Defective Medical Device</li>
                     <li>Food Poisoning</li>
                 </ul>
-                <button onclick="location.href='../Web/Login.php'" type="button"> Login</button>
-                <button name="button" value="OK" type="button" onclick="contact()">Contact me</button>  
-                    <script>  
-                        function contact()
-                        {  
-                         alert("Contac ");  
-                         
-                         }  
+                <button onclick="location.href='../Web/Login.php'" type="button"> Detail</button>
+                
+                <form id="starform" action="">
+ 
+                    <p>Qunlity <em>(Required)</em>: <input id="textbox1" name="textname" type="text" /></p>
+                  <select name="soluong">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                  </select>
+                </form>
+                <button name="button" value="OK" type="button" onclick="display()">Contact me</button>  
+                    <script type= "text/javascript">  
+                        function display()
+                            {
+                               alert(document.forms["starform"].textname.value);
+                               alert(document.forms["starform"].soluong.value);
+                            }
                          
                     </script>
             </article>
