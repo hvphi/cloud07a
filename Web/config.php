@@ -7,7 +7,7 @@ define('DB_PASSWORD', '');
 define('DB_NAME', 'shoeshop');
  
 /* Attempt to connect to MySQL database */
-//$link = mysqli_connect(locahost, root, '', shoeshop);
+
 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
  
 // Check connection
