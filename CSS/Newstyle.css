@@ -1590,5 +1590,24 @@ transition: all 0.3s ease-in;
  .copyright a:hover {
      color: #ff7e1d ;
 }
+
+.image-cropper {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.profile-pic {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+li.img {
+    border-radius: 50%;
+}
+#circle {
+  border-radius: 50%
+}
 /** end footer **/
 /*--------------------------------------------------------------------- ener page css ---------------------------------------------------------------------*/

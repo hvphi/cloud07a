@@ -5,17 +5,17 @@
   <link rel="stylesheet" href="../CSS/style.css">
   </head>
   <?php
-  include 'config.php';
-  session_start();
+    include 'config.php';
+    session_start();
 
-$userid = $_SESSION["username"];
-$sql = "SELECT * FROM users1 where username='$userid'";
+    $userid = $_SESSION["username"];
+    $sql = "SELECT * FROM users1 where username='$userid'";
 
-$query=mysqli_query($link, $sql) or die(mysqli_error());
-$row=mysqli_fetch_array($query);
+    $query=mysqli_query($link, $sql) or die(mysqli_error());
+    $row=mysqli_fetch_array($query);
   ?>
-  <h1>User Profile</h1>
-<div class="profile-input-field">
+    <h1>User Profile</h1>
+    <div class="profile-input-field">
         <h3>Please Fill-out All Fields</h3>
         <img src="<?php echo $row['picture']; ?>" width="80px" height="120px">
         <form method="post" action="#" >
@@ -46,15 +46,15 @@ $row=mysqli_fetch_array($query);
         $fullname = $_POST['fname'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
-      $query = "UPDATE users1 SET Fullname = '$fullname',
+        $query = "UPDATE users1 SET Fullname = '$fullname',
                       email = '$email', phone = '$phone'
                       WHERE username = '$userid'";
                     $result = mysqli_query($link, $query) or die(mysqli_error($link));
-                    ?>
+       ?>
                      <script type="text/javascript">
-                        alert("Update Successfull.");
+                        alert("Update Successfully.");
                     window.location = "../index.php";
                 </script>
         <?php
              }              
-?>
+        ?>

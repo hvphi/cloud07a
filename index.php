@@ -75,6 +75,21 @@
                             <a class="nav-link" href="#contact">Contact</a>
                        </li>
                        <li> <a href="#"><img src="images/icon_b.png" alt="#" /></a></li>
+                       <?php 
+                            session_start();
+                            if(!empty($_SESSION['picture']))
+                            {
+                                 $path = $_SESSION['picture'];
+                                 $pathSolute = substr($path, 3, strlen($path)-3);
+                            }
+                            else
+                                $pathSolute = 'images/100-natural.png'
+                        ?> 
+                              
+                       <li id="circle">
+                           <img src="<?php echo $pathSolute;?>" width="30px" height="30px">
+                       </li>
+                   
                      </ul>
                    </nav>
                  </div>
