@@ -35,7 +35,7 @@ switch($_GET["action"]) {
                     $userid = $_SESSION["username"];
                     $invoiceArray =  $db_handle->runQuery("SELECT InvoiceID FROM `invoice` ORDER BY 1 DESC LIMIT 1");
                     $invoiceID = $invoiceArray[0]["InvoiceID"] + 1;
-                    $db_handle->runUpdate("INSERT INTO `invoice` (`InvoiceID`,`userName`) VALUES ($invoiceID,'$userid')");
+                    $db_handle->runUpdate("INSERT INTO `invoice` (`InvoiceID`,`userName`,`status`) VALUES ($invoiceID,'$userid',-1)");
                     
                      //Cap nhat vao bang Detail(ID, InvoiceID, ProductID, quantity) 
                     foreach ($_SESSION["cart_item"] as $item){
@@ -146,13 +146,15 @@ if(isset($_SESSION["cart_item"])){
                     $userid = $_SESSION["username"];
                     $invoiceArray =  $db_handle->runQuery("SELECT InvoiceID FROM `invoice` ORDER BY 1 DESC LIMIT 1");
                     $invoiceID = $invoiceArray[0]["InvoiceID"] + 1;
-                    $db_handle->runUpdate("INSERT INTO `invoice` (`InvoiceID`,`userName`) VALUES ($invoiceID,'$userid')");
+                    $db_handle->runUpdate("INSERT INTO `invoice` (`InvoiceID`,`userName`,`status`) "
+                            . "VALUES ($invoiceID,'$userid', -1)");
                     
                      //Cap nhat vao bang Detail(ID, InvoiceID, ProductID, quantity) 
                     foreach ($_SESSION["cart_item"] as $item){
                         $Product_id = $item["code"];
                         $Product_Quantity = $item["quantity"];
-                         $db_handle->runUpdate("INSERT INTO `Detail` (`InvoiceID`,`ProductId`,`quantity`) VALUES ($invoiceID,'$Product_id',$Product_Quantity)");
+                         $db_handle->runUpdate("INSERT INTO `Detail` (`InvoiceID`,`ProductId`,`quantity`) "
+                                 . "VALUES ($invoiceID,'$Product_id',$Product_Quantity)");
                     }
 		}
                 else

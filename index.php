@@ -74,6 +74,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">Contact</a>
                        </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="Web/InvoiceList.php">View Order</a>
+                       </li>
                        <li> <a href="#"><img src="images/icon_b.png" alt="#" /></a></li>
                        <?php 
                             session_start();
