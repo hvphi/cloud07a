@@ -61,7 +61,17 @@ $selected = 5;
          
 		<td><?php echo $row["Orderdate"]?></td>
           
-		<td><?php echo $row["status"]?></td>
+		<td>
+                    <?php 
+                        if($row["status"] ==0)
+                            echo "Waiting for approving";
+                        else
+                            if($row["status"] ==1)
+                                echo "Shipping";
+                            else
+                            echo "Received"
+                    ?>
+                </td>
             </tr>
             <?php
             
